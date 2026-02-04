@@ -1,70 +1,73 @@
-git add README.md# Análisis de Vehículos Usados en EE. UU.
+# 🚗 Análisis Interactivo de Mercado: Vehículos Usados en EE. UU.
 
-Este proyecto corresponde al Sprint 7 del programa de Data Analyst en TripleTen. El objetivo principal fue desarrollar una aplicación interactiva utilizando Streamlit para analizar un conjunto de datos de vehículos usados en Estados Unidos. La app permite visualizar de forma clara y sencilla diversos patrones que pueden influir en el precio de un vehículo.
+## 🎯 Contexto del Negocio
+El mercado de vehículos usados es altamente dinámico y está influenciado por múltiples factores interconectados. Para los concesionarios y compradores, entender cómo variables como el kilometraje, el año y la condición afectan el precio es crucial para tomar decisiones de inversión acertadas. Este proyecto nace de la necesidad de transformar un conjunto de datos plano en una herramienta de exploración visual en tiempo real.
 
-## Objetivo del Proyecto
+## 🚀 Objetivo del Proyecto
+Desarrollar y desplegar una **aplicación web interactiva** que facilite el Análisis Exploratorio de Datos (EDA), permitiendo a los usuarios identificar patrones de precios y tendencias de inventario de forma dinámica.
 
-Crear una aplicación visual que facilite el análisis exploratorio de datos (EDA), permitiendo identificar características relevantes que influyen en el precio de los vehículos, como el kilometraje, año del modelo, tipo de transmisión, condición, entre otros. 
+## 📊 Alcance del Análisis
+* **Datos:** Conjunto de datos de anuncios de venta de vehículos en EE. UU.
+* **Procesamiento:** Limpieza exhaustiva de valores ausentes en kilometraje, cilindros y modelos, asegurando la integridad de las visualizaciones.
+* **Interactividad:** Implementación de filtros dinámicos que permiten segmentar el mercado por tipo de vehículo, marca y condición.
 
-## Archivos del Proyecto
+## 💡 Principales Insights (EDA)
+* **Depreciación Crítica:** Se identificó la curva de correlación negativa entre el kilometraje y el precio, detectando los puntos de mayor pérdida de valor.
+* **Segmentación por Transmisión:** El volumen de vehículos automáticos domina el mercado, influyendo en la liquidez de los anuncios.
+* **Tiempo de Venta:** Análisis del periodo de publicación para identificar qué tipos de vehículos rotan más rápido en el inventario.
 
-```
-.
+## 🛠️ Enfoque Analítico y Funcionalidad
+La solución no es solo un reporte estático, sino una **WebApp funcional**:
+* **Visualización Dinámica:** Uso de histogramas y gráficos de dispersión interactivos que responden a la entrada del usuario.
+* **Ingeniería de Datos:** Creación de un dataset optimizado (`vehicles_clean.csv`) para mejorar el tiempo de respuesta de la aplicación.
+
+## 📈 Métricas y Resultados
+* **Accesibilidad:** Disponibilidad del análisis al 100% vía web mediante la nube.
+* **Eficiencia Visual:** Reducción del tiempo de interpretación de datos mediante la centralización de KPIs en un dashboard único.
+
+## 🧠 Impacto en Decisiones de Negocio
+* **Estrategia de Precios:** Permite a los vendedores ajustar precios competitivos basados en la distribución real del mercado.
+* **Optimización de Inventario:** Identificación de las marcas y modelos con mayor presencia y precio promedio para diversificar el stock.
+
+## 💻 Tecnologías y Herramientas
+* **Dashboard:** Streamlit (Framework de despliegue).
+* **Visualización:** Plotly Express (Gráficos interactivos), Seaborn, Matplotlib.
+* **Manipulación de Datos:** Pandas, NumPy.
+* **Cloud:** Render (Hosting de la aplicación).
+
+## 🌍 Aplicación Desplegada
+La herramienta está disponible para uso público en el siguiente enlace:
+👉 [**Visualizador de Mercado - Vehículos Usados**](https://sprint-7-psv8.onrender.com)
+
+---
+
+## 📂 Estructura del Repositorio
+```text
 ├── app.py                 # Aplicación principal en Streamlit
-├── vehicles_us.csv        # Dataset original entregado por TripleTen
-├── vehicles_clean.csv     # Dataset limpiado y procesado (utilizado por la app)
-├── requirements.txt       # Librerías necesarias para correr la app
-├── README.md              # Este archivo
-└── notebooks
-    └── EDA.ipynb          # Análisis exploratorio y limpieza de datos
+├── data/
+│   ├── vehicles_us.csv    # Dataset original
+│   └── vehicles_clean.csv # Dataset procesado para la App
+├── notebooks/
+│   └── EDA.ipynb          # Análisis exploratorio y limpieza previa
+├── requirements.txt       # Librerías necesarias (Streamlit, Plotly, etc.)
+└── README.md              # Documentación profesional
 ```
 
-> **Nota importante**: El archivo `vehicles_clean.csv` contiene los datos preprocesados y es esencial para que la aplicación funcione correctamente. Fue generado a partir del dataset original (`vehicles_us.csv`) mediante limpieza y transformación, llevadas a cabo en el notebook `EDA.ipynb`.
+## ▶️ Cómo Ejecutar la App (Local)
 
-## Estructura de la App
-
-La aplicación incluye las siguientes visualizaciones clave:
-
-- Distribución de precios de los vehículos.
-- Relación entre precio y kilometraje.
-- Distribución por condición del vehículo.
-- Top 20 marcas con mayor precio promedio.
-- Cantidad de distribuidores por año del modelo.
-- Distribución por tipo de transmisión.
-- Tiempo de publicación del anuncio.
-
-## Tecnologías Utilizadas
-
-- Python 3.13.5
-- Streamlit
-- Pandas
-- Plotly Express
-- Seaborn
-- Matplotlib
-
-## Aplicación Desplegada
-
-Puedes acceder a la aplicación en línea desde el siguiente enlace:
-
-👉 [https://sprint-7-psv8.onrender.com](https://sprint-7-psv8.onrender.com)
-
-
-## Cómo Ejecutar la App
-
-1. Asegúrate de tener Python instalado y crea un entorno virtual si lo deseas.
-2. Instala las dependencias:
-
+1. **Clonar el repositorio:**
    ```bash
+   git clone [https://github.com/DiegoTascon94/nombre-del-repo.git](https://github.com/DiegoTascon94/nombre-del-repo.git)
+   ```
+2. **Instalar dependencias:**
    pip install -r requirements.txt
-   ```
 
-3. Ejecuta la aplicación:
-
-   ```bash
+3. **Lanzar la aplicación:**
    streamlit run app.py
-   ```
 
-## Notas Finales
+## 📝 Conclusiones
+Este proyecto demuestra la capacidad de cerrar la brecha entre el análisis técnico en notebooks y la entrega de valor al usuario final. La interactividad de la App permite que personas sin conocimientos técnicos puedan extraer conclusiones valiosas del mercado de vehículos de forma autónoma.
 
-El análisis se diseñó para proporcionar una visión general y no busca profundizar en modelos predictivos ni segmentaciones avanzadas. El propósito es ofrecer una herramienta interactiva que sirva como base para futuras exploraciones más detalladas.
-
+## 🔮 Próximos Pasos / Mejoras Futuras
+* **Modelo Predictivo:** Integrar un estimador de precios basado en Machine Learning para predecir el valor de un auto según sus características (Kilometraje, Año, Marca).
+* **Filtros Geográficos:** Implementar mapas interactivos si se dispone de datos de ubicación por estado, permitiendo un análisis regional del mercado.   
