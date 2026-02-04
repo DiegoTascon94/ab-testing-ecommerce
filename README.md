@@ -43,13 +43,13 @@ La herramienta está disponible para uso público en el siguiente enlace:
 
 ## 📂 Estructura del Repositorio
 ```text
-├── app.py                 # Aplicación principal en Streamlit
-├── data/
-│   ├── vehicles_us.csv    # Dataset original
-│   └── vehicles_clean.csv # Dataset procesado para la App
 ├── notebooks/
-│   └── EDA.ipynb          # Análisis exploratorio y limpieza previa
-├── requirements.txt       # Librerías necesarias (Streamlit, Plotly, etc.)
+│   └── EDA.ipynb          # Análisis exploratorio y limpieza de datos
+├── app.py                 # Aplicación principal (Streamlit)
+├── requirements.txt       # Dependencias del proyecto
+├── vehicles_us.csv        # Dataset original (crudo)
+├── vehicles_clean.csv     # Dataset procesado para la App
+├── .gitignore             # Archivos excluidos de Git
 └── README.md              # Documentación profesional
 ```
 
